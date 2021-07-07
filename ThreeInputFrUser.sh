@@ -11,5 +11,6 @@ echo " input are "$a $b $c
 
 
 d=$(($a+$b*$c))
-
-echo "Result is "$d
+e=$(($a8$b+$c))
+echo "Result is First exp is" $d
+echo "Result of second exp is" $e
