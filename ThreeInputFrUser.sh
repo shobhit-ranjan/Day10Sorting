@@ -20,15 +20,36 @@ echo "Result of Third exp is" $f
 echo "Result of fouth exp is" $g
 
 
-declare -A dicti
 
-dicti[exp1]=$d
+arr=( $d $e $f $g )
 
-dicti[exp2]=$e
+echo "Array in original order"
+echo ${arr[*]}
 
-dicti[exp3]=$f
+# Performing Bubble sort
+for ((i = 0; i<5; i++))
+do
 
-dicti[exp4]=$g
+    for((j = 0; j<5-i-1; j++))
+    do
+
+        if [ ${arr[j]} -gt ${arr[$((j+1))]} ]
+        then
+            # swap
+            temp=${arr[j]}
+            arr[$j]=${arr[$((j+1))]}
+            arr[$((j+1))]=$temp
+        fi
+    done
+done
+
+echo "Array in sorted order :"
+echo ${arr[*]}
 
 
-echo ${dicti[@]}
+
+
+
+
+
+
