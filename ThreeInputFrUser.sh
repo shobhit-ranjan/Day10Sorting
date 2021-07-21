@@ -1,6 +1,6 @@
 
 
-
+echo "hello cupa neta 10 thi aaaaaaaaaaaaaaaa"
 echo "Input Three Number. "
 
 read a
